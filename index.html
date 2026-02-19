@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INVICTEX 2026 6TO</title>
+
+<style>
+/* ================= ESTILOS GENERALES ================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5e6d3; /* Color crema oscuro */
+  color: #5a0f0f;           /* Rojo oscuro */
+  text-align: center;
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: #7a1c1c;
+  color: #f5e6d3;
+  padding: 40px 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  letter-spacing: 3px;
+}
+
+/* ================= SECCIONES ================= */
+.section {
+  padding: 60px 20px;
+}
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* ================= GALERÍA ================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= BOTÓN INSTAGRAM ================= */
+.instagram-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #7a1c1c;
+  color: #f5e6d3;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.instagram-btn:hover {
+  background-color: #5a0f0f;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: #7a1c1c;
+  color: #f5e6d3;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  header h1 { font-size: 2em; }
+  .section { padding: 40px 10px; }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>INVICTEX 2026 6TO</h1>
+  <p>Una promoción que deja huella 🔥</p>
+</header>
+
+<section class="section">
+  <h2>Sobre Nosotros</h2>
+  <p>Somos la promoción INVICTEX 2026 6TO, unidos por la fuerza, la amistad y la determinación.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Galería</h2>
+  <div class="gallery" id="gallery"></div>
+  <p>Fuimos desastrosos dificiles de entender y un poquito desobedientes pero mas que eso fuimos una familia.
+     fue un placer compartir estos años juntos, creando recuerdos inolvidables y superando desafíos.</p>
+</section>
+
+<section class="section">
+  <h2>Síguenos</h2>
+  <a href="https://instagram.com" target="_blank" class="instagram-btn">Ir a Instagram</a>
+</section>
+
+<footer>
+  <p>© 2026 INVICTEX 6TO 
+    -Manuel Garcia
+   
+  </p>
+</footer>
+
+<script>
+/* ================= CARGA AUTOMÁTICA DE IMÁGENES ================= */
+/* Solo tú controlas las fotos colocando los archivos en la carpeta "img" y agregando sus nombres aquí */
+
+const gallery = document.getElementById('gallery');
+
+// Cambia los nombres según las fotos que tengas en img/
+const images = [
+  'promo11.jpg',
+  'promo22.jpg',
+  
+];
+
+images.forEach(img => {
+  const imageElement = document.createElement('img');
+ imageElement.src = 'img/' + img;
+;
+; // Ruta de la imagen
+  imageElement.alt = img;
+  gallery.appendChild(imageElement);
+});
+</script>
+
+</body>
+</html>
