@@ -120,27 +120,26 @@ footer {
 </footer>
 
 <script>
-/* ================= CARGA AUTOMÁTICA DE IMÁGENES ================= */
-/* Solo tú controlas las fotos colocando los archivos en la carpeta "img" y agregando sus nombres aquí */
+document.addEventListener("DOMContentLoaded", function() {
 
-const gallery = document.getElementById('gallery');
+  const gallery = document.getElementById('gallery');
 
-// Cambia los nombres según las fotos que tengas en img/
-const images = [
-  'promo11.jpg',
-  'promo22.jpg',
-  
-];
+  const images = [
+    'promo11.jpg',
+    'promo22.jpg',
+  ];
 
-images.forEach(img => {
-  const imageElement = document.createElement('img');
- imageElement.src = 'img/' + img;
-;
-; // Ruta de la imagen
-  imageElement.alt = img;
-  gallery.appendChild(imageElement);
+  images.forEach(img => {
+    const imageElement = document.createElement('img');
+    imageElement.src = 'img/' + img;
+
+    imageElement.alt = img;
+    gallery.appendChild(imageElement);
+  });
+
 });
 </script>
+
 
 </body>
 </html>
